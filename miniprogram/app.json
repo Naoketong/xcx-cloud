@@ -1,0 +1,37 @@
+{
+  "pages": [
+    
+    "pages/create/create",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/detail/detail",
+    
+    
+    "pages/my_reply/my_reply",
+    "pages/my_topic/my_topic"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云微博",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/tab/index.png",
+      "selectedIconPath":"/images/tab/index_selected.png"
+    }, {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "/images/tab/my.png",
+      "selectedIconPath":"/images/tab/my_selected.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
