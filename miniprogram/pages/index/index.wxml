@@ -1,0 +1,23 @@
+<view class="page-container">
+  <view class="topics-list">
+    <!-- 先创建仅仅有文字，没有资源的话题结构 -->
+    <navigator class="topics-item"  wx:key="{{item._id}}" wx:for="{{ topics }}" url="/pages/detail/detail?id={{item._id}}">
+    <image class="topics-hd topics-avatar" src="{{item.userInfo.avatarUrl}}"></image>
+    <view class="topics-bd">
+      <view class="topics-nickName">{{item.userInfo.nickName}}</view>
+      <view class="topics-content">{{item.content}}</view>
+      <view class="topics-resource">
+        <image wx:if="{{item.imageUrl}}" class="resource-item" data-url="{{item.imageUrl}}" catchtap="handlePreviewImage" src="{{item.imageUrl}}" mode="widthFix"></image>
+        <video wx:if="{{item.videoUrl}}" class="resource-item"src="{{item.videoUrl}}" id="{{'video_' + item._id}}" controls="{{false}}" objectFit="cover">
+          <cover-view class="resource-video-controls" data-id="{{'video_' + item._id}}"  catchtap="handlePreviewVideo"></cover-view>
+        </video>
+      </view>
+      <view class="topics-info">
+        <text class="topics-reply-date">{{item.date_display}}</text>
+        <text wx:if="{{item.reply_number}}" class="topics-reply-number">{{item.reply_number}} 回复</text>
+      </view>
+    </view>
+  </navigator>
+  </view>
+</view>
+

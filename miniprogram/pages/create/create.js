@@ -1,10 +1,8 @@
-// 1.引用工具函数、全局对象、及实例化云数据库
-import { formatTime } from './../../utils/util.js';
+import { formatTime } from './../../utils/utils.js';
 const App = getApp();
 const db = wx.cloud.database()
 
 Page({
-  // 2.定义视图所需要的数据信息
   data: {
     content: '',
     imageUrl: '',

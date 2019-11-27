@@ -1,0 +1,60 @@
+/*1. 话题项目为两列布局，我们可以使用 flex 
+  然后添加适当的 padding 和底部边框*/
+.topics-item{
+  display: flex;
+  padding: 30rpx 24rpx;
+  border-bottom: 1px solid #e4e4e4;
+  background-color: #fff;
+  line-height: 40rpx;
+}
+
+/*2. 设置话题的两侧，左侧为固定，右侧自适应*/
+.topics-item .topics-hd{
+  flex: none;
+}
+
+.topics-item .topics-bd{
+  flex: 1;
+}
+
+/*3. 设置左侧的头像图片大小宽高和背景色，
+  再加一点右边的外边距和右侧栏目有点距离。*/
+.topics-item .topics-avatar{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  background-color: #f5f5f5;
+}
+
+/*4. 设置昵称的字体大小和颜色及下外边距*/
+.topics-item .topics-nickName{
+  font-size: 14px;
+  color: #606686;
+}
+
+/*5. 设置文字的字体大小和颜色及下外边距*/
+.topics-item .topics-content{
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/*6. 设置资源的大小为正方形, 设置视频控制容器为100%撑满*/
+.topics-item .topics-resource .resource-item{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #f5f5f5;
+}
+.resource-video-controls{
+  width: 100%;
+  height: 100%;
+}
+
+/*7. 设置信息的布局为 flex 两边对其，上外边距，及其字体大小和颜色*/
+.topics-item .topics-info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #999;
+}
