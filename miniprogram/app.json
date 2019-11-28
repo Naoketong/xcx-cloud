@@ -4,8 +4,8 @@
     "pages/create/create",
     "pages/my/my",
     
-    "pages/detail/detail",
     
+    "pages/detail/detail",
     
     "pages/my_reply/my_reply",
     "pages/my_topic/my_topic"
