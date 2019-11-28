@@ -1,0 +1,5 @@
+<view class="page-container">
+  <custom-topics topics="{{topics}}"></custom-topics>
+</view>
+
+<view wx:if="{{!topics.length}}" style="margin-top:200px;text-align:center;font-size:12px;color:#999;">木有数据</view>

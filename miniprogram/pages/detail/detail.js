@@ -94,6 +94,7 @@ Page({
         wx.showToast({ title: '评论成功' })
         replies.unshift({ content, userInfo, date_display, topic_id, createTime });
         this.setData({ replies, message: '' });
+        this.incReply(topic_id);
       },
       fail: err => {
         wx.showToast({
@@ -114,6 +115,20 @@ Page({
       success: (res)=> {
         let replies = res.data;
         this.setData({ replies, id })
+      }
+    })
+  },
+  incReply: function(topic_id) {
+    wx.cloud.callFunction({
+      name: 'incReply',
+      data: {
+        topic_id: topic_id
+      },
+      success: res => {
+        console.log('[云函数] [addReply] user openid: ', res.result)
+      },
+      fail: err => {
+        console.error('[云函数] [addReply] 调用失败', err)
       }
     })
   },
